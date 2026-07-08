@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP Macro Exam Review</title>
+<meta name="description" content="AP Macroeconomics exam review: unit guides, must-draw graphs, formulas, vocabulary in plain English, and practice questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#13294B;
+  --navy-deep:#0C1B33;
+  --ink:#22293200; /* unused guard */
+  --text:#1E2634;
+  --muted:#5A6474;
+  --paper:#FFFFFF;
+  --mist:#F4F6F9;
+  --line:#D9DFE8;
+  --gold:#9A7B2D;
+  --green:#2C6E52;
+  --green-bg:#EAF3EE;
+  --red:#A8433D;
+  --red-bg:#F8ECEB;
+  --radius:10px;
+  --maxw:1060px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  font-family:'Archivo',system-ui,sans-serif;
+  color:var(--text);
+  background:var(--paper);
+  line-height:1.6;
+  font-size:16.5px;
+}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:var(--navy)}
+h1,h2,h3,h4{font-weight:800;color:var(--navy);line-height:1.15;letter-spacing:-0.015em}
+p{max-width:70ch}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* ---------- top nav ---------- */
+.topnav{
+  position:sticky;top:0;z-index:50;
+  background:var(--navy);color:#fff;
+  border-bottom:3px solid var(--gold);
+}
+.topnav .wrap{display:flex;align-items:center;gap:18px;height:56px}
+.brand{font-weight:900;font-size:17px;letter-spacing:0.02em;color:#fff;text-decoration:none;white-space:nowrap}
+.brand span{color:#D9C68A}
+.navlinks{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-left:auto}
+.navlinks a{
+  color:#DCE3EE;text-decoration:none;font-size:14px;font-weight:600;
+  padding:8px 11px;border-radius:6px;white-space:nowrap;
+}
+.navlinks a:hover,.navlinks a:focus-visible{background:rgba(255,255,255,0.12);color:#fff}
+.navlinks a:focus-visible{outline:2px solid #D9C68A;outline-offset:1px}
+
+/* ---------- hero ---------- */
+.hero{background:var(--paper);padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;
+}
+.hero h1{font-size:clamp(34px,6vw,58px);font-weight:900;max-width:16ch}
+.hero .lede{margin-top:16px;font-size:18px;color:var(--muted);max-width:58ch}
+.hero .lede strong{color:var(--text)}
+
+/* exam fact strip */
+.factstrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:34px}
+.fact{background:var(--paper);padding:16px 18px}
+.fact .n{font-family:'IBM Plex Mono',monospace;font-size:24px;font-weight:600;color:var(--navy)}
+.fact .l{font-size:13px;color:var(--muted);margin-top:2px;line-height:1.35}
+
+/* ---------- sections ---------- */
+section{padding:56px 0}
+section.alt{background:var(--mist)}
+.sec-head{margin-bottom:28px}
+.sec-head h2{font-size:clamp(26px,4vw,36px)}
+.sec-head p{color:var(--muted);margin-top:8px}
+
+/* ---------- weighting bar ---------- */
+.weightbar{display:flex;width:100%;height:52px;border-radius:8px;overflow:hidden;margin-top:26px;border:1px solid var(--line)}
+.weightbar div{
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;
+  min-width:0;
+}
+.wb-legend{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:12px;font-size:13.5px;color:var(--muted)}
+.wb-legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+/* ---------- unit cards ---------- */
+.unitgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px}
+.unit{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 22px 18px;display:flex;flex-direction:column;
+  border-top:4px solid var(--navy);
+}
+.unit .u-tag{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.unit .u-num{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase}
+.unit .u-wt{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted)}
+.unit h3{font-size:19px;margin-bottom:12px}
+.unit ul{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:14.5px}
+.unit ul li{padding-left:18px;position:relative;line-height:1.45}
+.unit ul li::before{content:"›";position:absolute;left:2px;color:var(--gold);font-weight:800}
+.unit .u-terms{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted);line-height:1.5}
+.unit .u-terms b{color:var(--navy);font-weight:700}
+
+/* ---------- graphs ---------- */
+.graphgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.gcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.gcard h3{font-size:16.5px;margin-bottom:4px}
+.gcard .g-when{font-size:13px;color:var(--muted);margin-bottom:10px}
+.gcard svg{width:100%;height:auto;display:block;background:#FBFCFE;border:1px solid var(--line);border-radius:6px}
+.gcard .g-check{margin-top:10px;font-size:13px;color:var(--muted);line-height:1.5}
+.gcard .g-check b{color:var(--green);font-weight:700}
+.g-note{
+  margin-top:24px;background:var(--navy);color:#E6EBF4;border-radius:var(--radius);
+  padding:20px 22px;font-size:15px;line-height:1.6;
+}
+.g-note b{color:#D9C68A}
+
+/* svg text */
+.ax{stroke:#3A4557;stroke-width:1.6}
+.cv{fill:none;stroke:var(--navy);stroke-width:2.4}
+.cv2{fill:none;stroke:#7A8699;stroke-width:2.4}
+.cvg{fill:none;stroke:var(--gold);stroke-width:2.4}
+.dash{stroke:#98A2B3;stroke-width:1.2;stroke-dasharray:4 4}
+text.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#33405A;font-weight:600}
+text.axl{font-family:'Archivo',sans-serif;font-size:12px;fill:#5A6474}
+
+/* ---------- formulas ---------- */
+.ftable{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.ftable th,.ftable td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.ftable th{background:var(--navy);color:#fff;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700}
+.ftable td:first-child{font-weight:700;color:var(--navy);width:26%;font-size:14.5px}
+.ftable td:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:14px;width:36%}
+.ftable td:last-child{font-size:14px;color:var(--muted)}
+.ftable tr:last-child td{border-bottom:none}
+
+/* ---------- vocab ---------- */
+.vsearch{
+  width:100%;max-width:420px;padding:12px 16px;font-size:16px;
+  border:2px solid var(--line);border-radius:8px;font-family:'Archivo',sans-serif;
+  margin-bottom:22px;background:var(--paper);color:var(--text);
+}
+.vsearch:focus{outline:none;border-color:var(--navy)}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.vcard{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.vcard .vt{font-weight:800;color:var(--navy);font-size:15.5px}
+.vcard .vu{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);margin-left:6px}
+.vcard .vd{font-size:14px;margin-top:5px;line-height:1.5}
+.vempty{color:var(--muted);font-size:15px;display:none}
+
+/* ---------- practice quiz ---------- */
+.chipbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{
+  border:1.5px solid var(--line);background:var(--paper);color:var(--text);
+  padding:8px 15px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;
+  font-family:'Archivo',sans-serif;
+}
+.chip:hover{border-color:var(--navy)}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.chip:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.qcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;max-width:760px}
+.qmeta{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);margin-bottom:14px}
+.qtext{font-size:17.5px;font-weight:700;color:var(--navy);line-height:1.45;margin-bottom:18px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{
+  text-align:left;border:1.5px solid var(--line);background:var(--paper);
+  padding:13px 16px;border-radius:8px;font-size:15.5px;cursor:pointer;
+  font-family:'Archivo',sans-serif;color:var(--text);line-height:1.4;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.opt .ol{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--muted);flex-shrink:0}
+.opt:hover:not(:disabled){border-color:var(--navy);background:var(--mist)}
+.opt:disabled{cursor:default}
+.opt.correct{border-color:var(--green);background:var(--green-bg)}
+.opt.correct .ol{color:var(--green)}
+.opt.wrong{border-color:var(--red);background:var(--red-bg)}
+.opt.wrong .ol{color:var(--red)}
+.opt.dim{opacity:0.55}
+.feedback{margin-top:16px;padding:15px 17px;border-radius:8px;font-size:14.5px;line-height:1.55;display:none}
+.feedback.show{display:block}
+.feedback.good{background:var(--green-bg);border:1px solid #BCD8CB;color:#1E4A38}
+.feedback.bad{background:var(--red-bg);border:1px solid #E3C2BF;color:#6E2B27}
+.feedback b{display:block;margin-bottom:3px}
+.qnav{display:flex;align-items:center;gap:14px;margin-top:20px}
+.btn{
+  background:var(--navy);color:#fff;border:none;padding:11px 22px;border-radius:8px;
+  font-size:15px;font-weight:700;cursor:pointer;font-family:'Archivo',sans-serif;
+}
+.btn:hover{background:var(--navy-deep)}
+.btn:disabled{opacity:0.4;cursor:default}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--navy);background:var(--mist)}
+.score{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--muted)}
+.score b{color:var(--navy)}
+
+/* ---------- FRQ ---------- */
+.frqgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.frq{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);padding:20px 22px}
+.frq h3{font-size:16.5px;margin-bottom:8px}
+.frq p,.frq li{font-size:14.5px;line-height:1.55}
+.frq ul{padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.verbtable{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}
+.verbtable td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.verbtable td:first-child{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--navy);white-space:nowrap}
+.verbtable tr:last-child td{border-bottom:none}
+
+/* ---------- timer ---------- */
+.timedbar{
+  display:flex;align-items:center;gap:9px;margin-bottom:18px;
+  font-size:14.5px;font-weight:600;color:var(--navy);cursor:pointer;user-select:none;
+}
+.timedbar input{width:17px;height:17px;accent-color:var(--navy);cursor:pointer}
+.timerlbl{font-weight:600;color:var(--navy)}
+.timerlbl.low{color:var(--red)}
+
+/* ---------- sentence frames ---------- */
+.frames{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:var(--radius);padding:20px 22px}
+.frames h3{font-size:16.5px;margin-bottom:8px}
+.frames p{font-size:14.5px;margin-bottom:10px}
+.frames ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.frames li{
+  font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.55;
+  background:var(--mist);border:1px solid var(--line);border-radius:6px;padding:9px 12px;
+}
+.frames li b{color:var(--gold);font-weight:600}
+
+/* ---------- practice FRQs ---------- */
+.fpq{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:14px;overflow:hidden}
+.fpq > summary{
+  cursor:pointer;padding:16px 20px;font-weight:800;color:var(--navy);font-size:16px;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.fpq > summary::-webkit-details-marker{display:none}
+.fpq > summary::after{content:"+";font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--gold);flex-shrink:0}
+.fpq[open] > summary::after{content:"−"}
+.fpq > summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.fpq .fpts{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);font-weight:400;margin-left:auto}
+.fpbody{padding:0 20px 18px;font-size:14.5px}
+.fpbody .scen{background:var(--mist);border-radius:8px;padding:12px 15px;margin-bottom:14px;line-height:1.55}
+.fpbody ol{padding-left:22px;display:flex;flex-direction:column;gap:9px;line-height:1.5}
+.sg{margin-top:16px;background:var(--green-bg);border:1px dashed #BCD8CB;border-radius:8px}
+.sg summary{cursor:pointer;padding:11px 15px;font-weight:700;color:var(--green);font-size:14px;list-style:none}
+.sg summary::-webkit-details-marker{display:none}
+.sg summary::before{content:"✓ "}
+.sg ul{list-style:none;padding:2px 15px 14px;display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.5}
+.sg .pt{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--gold)}
+.subhead{margin:38px 0 16px}
+.subhead h3{font-size:21px}
+.subhead p{color:var(--muted);font-size:14.5px;margin-top:4px}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy-deep);color:#9FB0C8;padding:34px 0;font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+footer a{color:#D9C68A}
+
+@media (max-width:640px){
+  .topnav .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+  .navlinks{width:100%;margin-left:0}
+  section{padding:44px 0}
+  .weightbar{height:44px}
+  .weightbar div{font-size:10.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">AP MACRO <span>REVIEW</span></a>
+    <div class="navlinks">
+      <a href="#exam">The Exam</a>
+      <a href="#units">Units</a>
+      <a href="#graphs">Graphs</a>
+      <a href="#formulas">Formulas</a>
+      <a href="#vocab">Vocabulary</a>
+      <a href="#practice">Practice</a>
+      <a href="#frq">FRQ Strategy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">AP Macroeconomics · Exam Review</p>
+    <h1>Everything here is on the exam. Nothing else is.</h1>
+    <p class="lede">This page follows the official College Board course outline. Read the units, learn the graphs, memorize the formulas, and practice the questions. <strong>Study where the points are.</strong></p>
+  </div>
+</header>
+
+<section id="exam">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Know the exam before you take it</h2>
+      <p>The AP Macro exam is 2 hours and 10 minutes. A basic four-function calculator is allowed on both sections.</p>
+    </div>
+    <div class="factstrip">
+      <div class="fact"><div class="n">60</div><div class="l">Multiple-choice questions<br>70 minutes · 66.65% of score</div></div>
+      <div class="fact"><div class="n">3</div><div class="l">Free-response questions<br>60 minutes · 33.35% of score</div></div>
+      <div class="fact"><div class="n">10 pts</div><div class="l">FRQ 1 is long (10 points).<br>FRQs 2 and 3 are short (5 points each)</div></div>
+      <div class="fact"><div class="n">10 min</div><div class="l">Reading period before the FRQs.<br>Use it to plan your graphs</div></div>
+      <div class="fact"><div class="n">~50%</div><div class="l">Units 3 + 4 + 5 together are about half of the multiple-choice section</div></div>
+    </div>
+
+    <div class="weightbar" role="img" aria-label="Exam weighting by unit: Unit 1 about 7 percent, Unit 2 about 14 percent, Unit 3 about 22 percent, Unit 4 about 20 percent, Unit 5 about 25 percent, Unit 6 about 12 percent">
+      <div style="width:7%;background:#5A6B85">U1</div>
+      <div style="width:14%;background:#41577A">U2</div>
+      <div style="width:22%;background:#2C4468">U3</div>
+      <div style="width:20%;background:#1E3357">U4</div>
+      <div style="width:25%;background:#13294B">U5</div>
+      <div style="width:12%;background:#9A7B2D">U6</div>
+    </div>
+    <div class="wb-legend">
+      <span><i class="dot" style="background:#5A6B85"></i>U1 Basics 5–10%</span>
+      <span><i class="dot" style="background:#41577A"></i>U2 Indicators 12–17%</span>
+      <span><i class="dot" style="background:#2C4468"></i>U3 AD–AS 17–27%</span>
+      <span><i class="dot" style="background:#1E3357"></i>U4 Financial 18–23%</span>
+      <span><i class="dot" style="background:#13294B"></i>U5 Long Run 20–30%</span>
+      <span><i class="dot" style="background:#9A7B2D"></i>U6 Open Econ 10–13%</span>
+    </div>
+  </div>
+</section>
+
+<section id="units" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The six units — what you must know</h2>
+      <p>Each card lists the ideas the exam actually tests, in plain English.</p>
+    </div>
+    <div class="unitgrid">
+
+      <article class="unit">
+        <div class="u-tag"><span class="u-num">Unit 1</span><span class="u-wt">5–10%</span></div>
+        <h3>Basic Economic Concepts</h3>
+        <ul>
+          <li><b>Scarcity:</b> we have limited resources but unlimited wants. Every choice has a cost.</li>
+          <li><b>Opportunity cost</b> = the value of the next best thing you give up.</li>
+          <li><b>PPC:</b> points ON the curve = efficient. Inside = unemployment of resources. Outside = impossible right now. The curve shifts out with more resources or better technology.</li>
+          <li><b>Comparative advantage:</b> the producer with the LOWER opportunity cost should make that good. Countries trade because of this.</li>
+          <li>Demand shifts (not price!): tastes, income, related goods, expectations, number of buyers. Supply shifts: input costs, technology, taxes/subsidies, expectations, number of sellers.</li>
+          <li>A price change moves you ALONG a curve. A shifter moves the WHOLE curve.</li>
+        </ul>
+        <div class="u-terms"><b>Key terms:</b> scarcity · opportunity cost · PPC · absolute vs. comparative advantage · equilibrium · shortage · surplus</div>
+      </article>
+
+      <article class="unit">
+        <div class="u-tag"><span class="u-num">Unit 2</span><span class="u-wt">12–17%</span></div>
+        <h3>Economic Indicators &amp; the Business Cycle</h3>
+        <ul>
+          <li><b>GDP = C + I + G + Xn</b> — everything produced inside a country in one year.</li>
+          <li>NOT in GDP: used goods, financial transfers (stocks), intermediate goods, non-market work, and things made in other countries.</li>
+          <li><b>Unemployment types:</b> frictional (between jobs), structural (skills no longer needed), cyclical (recession). Natural rate = frictional + structural. At full employment, cyclical = 0.</li>
+          <li>Unemployment rate counts only people looking for work. Discouraged workers are NOT counted — this makes the rate look better than reality.</li>
+          <li><b>Inflation:</b> measured with CPI. It hurts savers and lenders; it helps borrowers (they pay back cheaper dollars).</li>
+          <li><b>Real vs. nominal:</b> real = adjusted for inflation. Always compare economies with REAL GDP.</li>
+        </ul>
+        <div class="u-terms"><b>Key terms:</b> GDP · CPI · inflation · frictional / structural / cyclical · labor force · recession · expansion</div>
+      </article>
+
+      <article class="unit">
+        <div class="u-tag"><span class="u-num">Unit 3</span><span class="u-wt">17–27%</span></div>
+        <h3>National Income &amp; Price Determination</h3>
+        <ul>
+          <li><b>AD shifters:</b> changes in C, I, G, or Xn. AD slopes down because of the wealth, interest-rate, and exchange-rate effects.</li>
+          <li><b>SRAS shifters:</b> input prices (wages, oil), productivity, inflation expectations. <b>LRAS</b> is vertical at full-employment output.</li>
+          <li><b>Recessionary gap:</b> output below full employment. <b>Inflationary gap:</b> output above it.</li>
+          <li><b>Multiplier:</b> spending is multiplied. Spending multiplier = 1/(1−MPC). Tax multiplier is smaller and negative: −MPC/MPS.</li>
+          <li><b>Fiscal policy</b> = government spending and taxes. Recession → spend more / cut taxes. Inflation → spend less / raise taxes.</li>
+          <li><b>Long-run self-adjustment:</b> with no policy, wages eventually change and SRAS shifts to bring output back to full employment.</li>
+        </ul>
+        <div class="u-terms"><b>Key terms:</b> AD · SRAS · LRAS · MPC · MPS · multiplier · output gap · fiscal policy · automatic stabilizers</div>
+      </article>
+
+      <article class="unit">
+        <div class="u-tag"><span class="u-num">Unit 4</span><span class="u-wt">18–23%</span></div>
+        <h3>Financial Sector</h3>
+        <ul>
+          <li><b>Bond prices and interest rates move in opposite directions.</b> Memorize this.</li>
+          <li><b>Real interest rate = nominal rate − inflation.</b> Real is what matters for saving and investing.</li>
+          <li>Money has 3 jobs: medium of exchange, unit of account, store of value.</li>
+          <li><b>Banking:</b> banks keep some deposits as reserves and lend the rest. Money multiplier = 1 / reserve requirement. A $1,000 deposit with a 10% requirement can create up to $10,000 of money.</li>
+          <li><b>Money market:</b> vertical money supply, downward money demand. The Fed shifts MS to change the nominal interest rate.</li>
+          <li><b>Monetary policy:</b> to fight recession → buy bonds / lower rates (expansionary). To fight inflation → sell bonds / raise rates (contractionary). With ample reserves, the Fed mainly adjusts administered rates like interest on reserves.</li>
+          <li><b>Loanable funds market</b> uses the REAL interest rate. Savers supply; borrowers demand.</li>
+        </ul>
+        <div class="u-terms"><b>Key terms:</b> reserves · demand deposits · open market operations · federal funds rate · money demand · loanable funds</div>
+      </article>
+
+      <article class="unit">
+        <div class="u-tag"><span class="u-num">Unit 5</span><span class="u-wt">20–30%</span></div>
+        <h3>Long-Run Consequences of Stabilization Policies</h3>
+        <ul>
+          <li><b>Biggest unit on the exam.</b> It connects everything from Units 3 and 4.</li>
+          <li><b>Phillips curve:</b> short run — inflation and unemployment trade off (SRPC slopes down). Long run — no trade-off; LRPC is vertical at the natural rate.</li>
+          <li>AD shifts = movement ALONG the SRPC. SRAS shifts = the SRPC itself SHIFTS.</li>
+          <li><b>Quantity theory: MV = PQ.</b> If money grows too fast for too long, you get inflation. "Inflation is a monetary phenomenon."</li>
+          <li><b>Deficit</b> = one year of overspending. <b>Debt</b> = all deficits added up.</li>
+          <li><b>Crowding out:</b> government borrowing raises the real interest rate → less private investment → slower growth.</li>
+          <li><b>Economic growth</b> comes from more capital, better technology, and better-educated workers (productivity). Growth = LRAS and the PPC shift right.</li>
+        </ul>
+        <div class="u-terms"><b>Key terms:</b> SRPC · LRPC · natural rate · quantity theory · velocity · deficit vs. debt · crowding out · productivity</div>
+      </article>
+
+      <article class="unit">
+        <div class="u-tag"><span class="u-num">Unit 6</span><span class="u-wt">10–13%</span></div>
+        <h3>Open Economy — International Trade &amp; Finance</h3>
+        <ul>
+          <li><b>Balance of payments:</b> current account (goods, services, income) + capital &amp; financial account (assets, investment). They balance each other.</li>
+          <li><b>Exchange rate</b> = the price of one currency in another currency.</li>
+          <li><b>Appreciate</b> = currency gets stronger. <b>Depreciate</b> = currency gets weaker.</li>
+          <li>Demand for dollars comes from foreigners wanting U.S. goods and assets. Supply of dollars comes from Americans buying foreign things.</li>
+          <li><b>The chain you must know:</b> currency depreciates → that country's exports get cheaper → exports ↑, imports ↓ → net exports ↑ → AD ↑.</li>
+          <li><b>Interest rates and capital flows:</b> money flows TO the country with the higher real interest rate. That country's currency appreciates.</li>
+        </ul>
+        <div class="u-terms"><b>Key terms:</b> exchange rate · appreciation · depreciation · current account · financial account · capital flows · net exports</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<section id="graphs">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The graphs you must draw from memory</h2>
+      <p>FRQ graders give points for correct labels and correct shifts. Practice drawing each one until it takes you under 30 seconds.</p>
+    </div>
+    <div class="graphgrid">
+
+      <div class="gcard">
+        <h3>Production Possibilities Curve</h3>
+        <p class="g-when">Use for: scarcity, opportunity cost, efficiency, economic growth.</p>
+        <svg viewBox="0 0 320 220" role="img" aria-label="PPC graph: a curve bowed outward from the vertical axis to the horizontal axis">
+          <line class="ax" x1="45" y1="15" x2="45" y2="185"/><line class="ax" x1="45" y1="185" x2="300" y2="185"/>
+          <path class="cv" d="M55 30 Q 220 55 275 175"/>
+          <circle cx="185" cy="70" r="4" fill="#13294B"/><text class="lbl" x="193" y="66">Efficient</text>
+          <circle cx="130" cy="130" r="4" fill="#9A7B2D"/><text class="lbl" x="138" y="134">Inside = unused resources</text>
+          <text class="axl" x="10" y="105" transform="rotate(-90 16 105)">Capital goods</text>
+          <text class="axl" x="120" y="205">Consumer goods</text>
+        </svg>
+        <p class="g-check"><b>Label:</b> both axes with the two goods, and the curve.</p>
+      </div>
+
+      <div class="gcard">
+        <h3>Reserve Market</h3>
+        <p class="g-when">Use for: modern Fed policy with AMPLE reserves. The Fed sets administered rates to move the policy rate.</p>
+        <svg viewBox="0 0 320 220" role="img" aria-label="Reserve market graph: demand for reserves slopes down and then becomes flat; supply of reserves is vertical and crosses the flat part; equilibrium at the policy rate">
+          <line class="ax" x1="45" y1="15" x2="45" y2="185"/><line class="ax" x1="45" y1="185" x2="300" y2="185"/>
+          <path class="cv2" d="M70 32 L150 118 Q175 145 205 147 L280 147"/><text class="lbl" x="255" y="138">DR</text>
+          <line class="cv" x1="230" y1="20" x2="230" y2="185"/><text class="lbl" x="220" y="14">SR</text>
+          <line class="dash" x1="45" y1="147" x2="230" y2="147"/><line class="dash" x1="230" y1="147" x2="230" y2="185"/>
+          <text class="lbl" x="12" y="151">PR₁</text><text class="lbl" x="222" y="200">Q₁</text>
+          <text class="axl" x="10" y="125" transform="rotate(-90 16 125)">Policy rate</text>
+          <text class="axl" x="100" y="205">Quantity of reserves</text>
+        </svg>
+        <p class="g-check"><b>Label:</b> Policy rate, Quantity of reserves, DR (down, then flat), SR (vertical), PR₁. With ample reserves, SR crosses the FLAT part of DR — so changing reserves barely moves the rate. The Fed moves the rate by changing administered rates (like interest on reserves), which shifts the flat part of DR up or down.</p>
+      </div>
+
+      <div class="gcard">
+        <h3>AD–AS Model</h3>
+        <p class="g-when">Use for: recessions, inflation, fiscal &amp; monetary policy. The most-used graph on the exam.</p>
+        <svg viewBox="0 0 320 220" role="img" aria-label="AD-AS graph with aggregate demand, short-run aggregate supply, and vertical long-run aggregate supply">
+          <line class="ax" x1="45" y1="15" x2="45" y2="185"/><line class="ax" x1="45" y1="185" x2="300" y2="185"/>
+          <line class="cvg" x1="185" y1="20" x2="185" y2="185"/><text class="lbl" x="172" y="14">LRAS</text>
+          <line class="cv" x1="70" y1="165" x2="265" y2="40"/><text class="lbl" x="270" y="40">SRAS</text>
+          <line class="cv2" x1="70" y1="40" x2="265" y2="165"/><text class="lbl" x="270" y="170">AD</text>
+          <line class="dash" x1="45" y1="93" x2="185" y2="93"/><line class="dash" x1="185" y1="93" x2="185" y2="185"/>
+          <text class="lbl" x="16" y="97">PL₁</text><text class="lbl" x="176" y="200">Yf</text>
+          <text class="axl" x="10" y="115" transform="rotate(-90 16 115)">Price level</text>
+          <text class="axl" x="130" y="205">Real GDP</text>
+        </svg>
+        <p class="g-check"><b>Label:</b> Price level, Real GDP, AD, SRAS, LRAS, PL₁, and Y (use Yf for full employment).</p>
+      </div>
+
+      <div class="gcard">
+        <h3>Money Market</h3>
+        <p class="g-when">Use for: monetary policy and the NOMINAL interest rate. Money supply is vertical.</p>
+        <svg viewBox="0 0 320 220" role="img" aria-label="Money market graph with vertical money supply and downward money demand">
+          <line class="ax" x1="45" y1="15" x2="45" y2="185"/><line class="ax" x1="45" y1="185" x2="300" y2="185"/>
+          <line class="cv" x1="170" y1="20" x2="170" y2="185"/><text class="lbl" x="158" y="14">MS</text>
+          <line class="cv2" x1="70" y1="35" x2="265" y2="170"/><text class="lbl" x="270" y="175">MD</text>
+          <line class="dash" x1="45" y1="104" x2="170" y2="104"/>
+          <text class="lbl" x="20" y="108">i₁</text><text class="lbl" x="163" y="200">Q₁</text>
+          <text class="axl" x="10" y="130" transform="rotate(-90 16 130)">Nominal interest rate</text>
+          <text class="axl" x="110" y="205">Quantity of money</text>
+        </svg>
+        <p class="g-check"><b>Label:</b> Nominal interest rate, Quantity of money, MS (vertical!), MD.</p>
+      </div>
+
+      <div class="gcard">
+        <h3>Loanable Funds Market</h3>
+        <p class="g-when">Use for: saving, borrowing, crowding out, and the REAL interest rate.</p>
+        <svg viewBox="0 0 320 220" role="img" aria-label="Loanable funds graph with upward supply from savers and downward demand from borrowers">
+          <line class="ax" x1="45" y1="15" x2="45" y2="185"/><line class="ax" x1="45" y1="185" x2="300" y2="185"/>
+          <line class="cv" x1="70" y1="170" x2="260" y2="35"/><text class="lbl" x="265" y="35">S<tspan dy="3" font-size="9">LF</tspan></text>
+          <line class="cv2" x1="70" y1="35" x2="260" y2="170"/><text class="lbl" x="265" y="175">D<tspan dy="3" font-size="9">LF</tspan></text>
+          <line class="dash" x1="45" y1="102" x2="165" y2="102"/><line class="dash" x1="165" y1="102" x2="165" y2="185"/>
+          <text class="lbl" x="20" y="106">r₁</text><text class="lbl" x="158" y="200">Q₁</text>
+          <text class="axl" x="10" y="125" transform="rotate(-90 16 125)">Real interest rate</text>
+          <text class="axl" x="90" y="205">Quantity of loanable funds</text>
+        </svg>
+        <p class="g-check"><b>Label:</b> REAL interest rate (not nominal!), S of loanable funds, D of loanable funds.</p>
+      </div>
+
+      <div class="gcard">
+        <h3>Phillips Curve</h3>
+        <p class="g-when">Use for: the inflation–unemployment trade-off, short run vs. long run.</p>
+        <svg viewBox="0 0 320 220" role="img" aria-label="Phillips curve graph with downward short-run curve and vertical long-run curve">
+          <line class="ax" x1="45" y1="15" x2="45" y2="185"/><line class="ax" x1="45" y1="185" x2="300" y2="185"/>
+          <line class="cvg" x1="165" y1="20" x2="165" y2="185"/><text class="lbl" x="152" y="14">LRPC</text>
+          <path class="cv2" d="M75 35 Q 130 130 265 165"/><text class="lbl" x="240" y="150">SRPC</text>
+          <line class="dash" x1="165" y1="185" x2="165" y2="200"/>
+          <text class="lbl" x="150" y="212">NRU</text>
+          <text class="axl" x="10" y="120" transform="rotate(-90 16 120)">Inflation rate</text>
+          <text class="axl" x="90" y="205">Unemployment rate</text>
+        </svg>
+        <p class="g-check"><b>Label:</b> Inflation rate, Unemployment rate, SRPC, LRPC vertical at the natural rate.</p>
+      </div>
+
+      <div class="gcard">
+        <h3>Foreign Exchange Market</h3>
+        <p class="g-when">Use for: appreciation and depreciation of a currency.</p>
+        <svg viewBox="0 0 320 220" role="img" aria-label="Foreign exchange market graph for a currency with supply and demand">
+          <line class="ax" x1="45" y1="15" x2="45" y2="185"/><line class="ax" x1="45" y1="185" x2="300" y2="185"/>
+          <line class="cv" x1="70" y1="170" x2="260" y2="35"/><text class="lbl" x="265" y="35">S$</text>
+          <line class="cv2" x1="70" y1="35" x2="260" y2="170"/><text class="lbl" x="265" y="175">D$</text>
+          <line class="dash" x1="45" y1="102" x2="165" y2="102"/><line class="dash" x1="165" y1="102" x2="165" y2="185"/>
+          <text class="lbl" x="12" y="106">e₁</text><text class="lbl" x="158" y="200">Q₁</text>
+          <text class="axl" x="6" y="140" transform="rotate(-90 12 140)">Euros per dollar</text>
+          <text class="axl" x="100" y="205">Quantity of dollars</text>
+        </svg>
+        <p class="g-check"><b>Label:</b> the vertical axis as "other currency per this currency" — e.g., euros per dollar for the dollar market.</p>
+      </div>
+
+      <div class="gcard">
+        <h3>Bank Balance Sheet (T-account)</h3>
+        <p class="g-when">Use for: banking questions. You read these; you may fill in numbers.</p>
+        <svg viewBox="0 0 320 220" role="img" aria-label="Bank T-account with assets on the left and liabilities on the right">
+          <line class="ax" x1="160" y1="30" x2="160" y2="190"/><line class="ax" x1="30" y1="55" x2="290" y2="55"/>
+          <text class="lbl" x="60" y="46">ASSETS</text><text class="lbl" x="185" y="46">LIABILITIES</text>
+          <text class="axl" x="40" y="85">Required reserves</text><text class="axl" x="40" y="110">Excess reserves</text><text class="axl" x="40" y="135">Loans</text>
+          <text class="axl" x="172" y="85">Demand deposits</text><text class="axl" x="172" y="110">Owner's equity</text>
+          <text class="lbl" x="40" y="175">Loans create money.</text>
+        </svg>
+        <p class="g-check"><b>Remember:</b> deposits are a LIABILITY for the bank. Only EXCESS reserves can be loaned out.</p>
+      </div>
+
+    </div>
+
+    <div class="g-note">
+      <b>The #1 way students lose FRQ points:</b> missing labels. Every graph needs labeled axes, labeled curves, and dashed lines to the equilibrium values. When something shifts, draw the new curve with a new label (AD₁ → AD₂) and an arrow showing the direction. An unlabeled graph earns zero, even if the idea is right.
+    </div>
+  </div>
+</section>
+
+<section id="formulas" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Formulas — memorize all of them</h2>
+      <p>About 16–20% of multiple-choice questions require calculation. These are the calculations.</p>
+    </div>
+    <table class="ftable">
+      <thead><tr><th>What it finds</th><th>Formula</th><th>Remember</th></tr></thead>
+      <tbody>
+        <tr><td>GDP</td><td>GDP = C + I + G + Xn</td><td>Xn = exports − imports. "I" is business investment, not stocks.</td></tr>
+        <tr><td>Unemployment rate</td><td>(unemployed ÷ labor force) × 100</td><td>Labor force = employed + unemployed. Not the whole population.</td></tr>
+        <tr><td>Labor force participation</td><td>(labor force ÷ adult population) × 100</td><td>Discouraged workers left the labor force — they lower this rate.</td></tr>
+        <tr><td>Inflation rate</td><td>(CPI new − CPI old) ÷ CPI old × 100</td><td>It is a percent CHANGE between two years.</td></tr>
+        <tr><td>CPI</td><td>(basket cost this year ÷ basket cost base year) × 100</td><td>CPI in the base year is always 100.</td></tr>
+        <tr><td>Real GDP</td><td>(nominal GDP ÷ price index) × 100</td><td>Real removes inflation. Use real GDP to compare years.</td></tr>
+        <tr><td>Real interest rate</td><td>nominal rate − inflation rate</td><td>The Fisher rule. If asked for nominal: real + inflation.</td></tr>
+        <tr><td>MPC and MPS</td><td>MPC + MPS = 1</td><td>MPC = change in spending ÷ change in income.</td></tr>
+        <tr><td>Spending multiplier</td><td>1 ÷ (1 − MPC)  =  1 ÷ MPS</td><td>Max change in GDP = initial spending × multiplier.</td></tr>
+        <tr><td>Tax multiplier</td><td>−MPC ÷ MPS</td><td>Always smaller than the spending multiplier, and negative.</td></tr>
+        <tr><td>Money multiplier</td><td>1 ÷ reserve requirement</td><td>Max new money = initial excess reserves × multiplier.</td></tr>
+        <tr><td>Quantity theory</td><td>M × V = P × Q</td><td>If V and Q are stable, more M means higher P (inflation).</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section id="vocab">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Vocabulary in plain English</h2>
+      <p>Short, simple definitions of the words the exam uses. Type to search.</p>
+    </div>
+    <input class="vsearch" id="vsearch" type="search" placeholder="Search a term… (example: inflation)" aria-label="Search vocabulary">
+    <div class="vgrid" id="vgrid"></div>
+    <p class="vempty" id="vempty">No matching term. Check the spelling or try a shorter word.</p>
+  </div>
+</section>
+
+<section id="practice" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Practice questions — 60, a full exam's worth</h2>
+      <p>10 per unit. Answer, read the explanation, then move on — wrong answers teach you the most. Pick "All units" with exam timing on to simulate the real 60-question, 70-minute section.</p>
+    </div>
+    <div class="chipbar" id="chipbar" role="group" aria-label="Choose a unit to practice"></div>
+    <label class="timedbar"><input type="checkbox" id="timedchk"> Exam timing — 70 seconds per question, just like the real test</label>
+    <div class="qcard">
+      <div class="qmeta"><span id="qcount">Question 1 of 1</span><span class="timerlbl" id="timer"></span><span id="qunit">Unit 1</span></div>
+      <div class="qtext" id="qtext">Loading…</div>
+      <div class="opts" id="opts"></div>
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+      <div class="qnav">
+        <button class="btn" id="nextbtn" disabled>Next question</button>
+        <button class="btn ghost" id="restartbtn">Start over</button>
+        <span class="score">Score: <b id="scorenum">0</b> / <span id="scoreden">0</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="frq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>FRQ strategy — how to earn the points</h2>
+      <p>The free-response section is 1/3 of your score. Graders follow a rubric. Give them exactly what the rubric asks for.</p>
+    </div>
+    <div class="frqgrid">
+      <div class="frq">
+        <h3>1 · Answer the verb</h3>
+        <p>Each question starts with a command word. Do exactly what it says — no more, no less.</p>
+        <table class="verbtable">
+          <tr><td>Identify</td><td>Give the answer in one short phrase. No explanation needed.</td></tr>
+          <tr><td>Define</td><td>Say what the term means.</td></tr>
+          <tr><td>Calculate</td><td>Show your work and give a number with units ($, %).</td></tr>
+          <tr><td>Explain</td><td>Give the answer AND the reason, as a chain: "X rises, so Y rises, so Z falls."</td></tr>
+          <tr><td>Show / Draw</td><td>Make a fully labeled graph with the change marked by arrows.</td></tr>
+        </table>
+      </div>
+      <div class="frq">
+        <h3>2 · Graph like a grader</h3>
+        <ul>
+          <li>Label BOTH axes, EVERY curve, and equilibrium points with dashed lines.</li>
+          <li>Shifts get a new curve with a new name (AD₁ → AD₂) and an arrow.</li>
+          <li>Use the right graph: money market = nominal rate; loanable funds = real rate.</li>
+          <li>Even if the question does not ask for a graph, sketching one helps you think.</li>
+        </ul>
+      </div>
+      <div class="frq">
+        <h3>3 · Use the chain of reasoning</h3>
+        <p>Most "explain" points are earned with a cause-and-effect chain. Practice writing them fast:</p>
+        <ul>
+          <li>Fed buys bonds → money supply ↑ → nominal interest rate ↓ → investment ↑ → AD ↑ → real GDP ↑ and price level ↑.</li>
+          <li>Government deficit ↑ → demand for loanable funds ↑ → real interest rate ↑ → private investment ↓ (crowding out).</li>
+          <li>Dollar depreciates → U.S. exports cheaper for foreigners → net exports ↑ → AD ↑.</li>
+        </ul>
+      </div>
+      <div class="frq">
+        <h3>4 · Manage the clock</h3>
+        <ul>
+          <li>Use the 10-minute reading period to plan all three answers and sketch graphs.</li>
+          <li>Spend about 25 minutes on FRQ 1 (10 points) and 15 minutes each on FRQs 2 and 3.</li>
+          <li>Answer every part. A blank earns zero; a short honest attempt can earn points.</li>
+          <li>Write short and clear. Graders reward correct chains, not long paragraphs.</li>
+        </ul>
+      </div>
+      <div class="frames">
+        <h3>5 · Sentence frames — copy these patterns</h3>
+        <p>You do not need fancy English on this exam. Fill in the blanks with economics, and you earn the point.</p>
+        <ul>
+          <li>When <b>___</b> increases, <b>___</b> decreases, because <b>___</b>.</li>
+          <li>The <b>___</b> curve shifts <b>right / left</b>. As a result, <b>___</b> rises and <b>___</b> falls.</li>
+          <li>The central bank should <b>buy / sell</b> bonds. This <b>increases / decreases</b> the money supply, so the nominal interest rate <b>falls / rises</b>.</li>
+          <li>Formula: <b>___</b>. Work: <b>___ × ___ = ___</b>. Answer: <b>$___ / ___%</b>.</li>
+          <li>The <b>(currency)</b> will <b>appreciate / depreciate</b>, because the <b>demand for / supply of</b> it <b>increases / decreases</b>.</li>
+          <li>The opportunity cost of <b>___</b> is <b>___</b>, because that is what must be given up.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subhead">
+      <h3>Practice FRQs — write by hand, then self-score</h3>
+      <p>These mirror the real exam: one long (10 points), two short (5 points each). Write your answers on paper with a pen, draw every graph, then open the scoring guide and check yourself point by point. Give the long one 25 minutes and each short one 15.</p>
+    </div>
+
+    <details class="fpq">
+      <summary>FRQ 1 · Recessionary gap, fiscal policy, and crowding out <span class="fpts">LONG · 10 points</span></summary>
+      <div class="fpbody">
+        <div class="scen">The economy of Country Z is in a recessionary gap. The unemployment rate is 9%, and the natural rate of unemployment is 5%. The marginal propensity to consume (MPC) is 0.9.</div>
+        <ol type="a">
+          <li>Draw a correctly labeled AD–AS graph for Country Z. Show the current price level PL₁, current output Y₁, and full-employment output Yf.</li>
+          <li>Identify one fiscal policy action the government could use to close the gap.</li>
+          <li>Suppose the government increases spending by $20 billion. Calculate the maximum possible change in real GDP. Show your work.</li>
+          <li>The government borrows the $20 billion. Using a correctly labeled loanable funds graph, show the effect of this borrowing on the real interest rate.</li>
+          <li>Based on your answer in (d), explain what happens to private investment.</li>
+          <li>Based on the change in the real interest rate in (d), will Country Z's currency appreciate or depreciate? Explain.</li>
+        </ol>
+        <details class="sg">
+          <summary>Show the scoring guide (self-score)</summary>
+          <ul>
+            <li><span class="pt">(a) 3 pts</span> — One: axes labeled "Price level" and "Real GDP" with downward AD, upward SRAS, vertical LRAS. Two: Y₁ shown LEFT of Yf. Three: PL₁ marked at the AD–SRAS intersection with dashed lines.</li>
+            <li><span class="pt">(b) 1 pt</span> — Increase government spending OR cut taxes (either one earns the point).</li>
+            <li><span class="pt">(c) 2 pts</span> — One for the multiplier: 1 ÷ (1 − 0.9) = 10. One for the answer: $20 billion × 10 = <b>$200 billion increase</b>. You must show the work.</li>
+            <li><span class="pt">(d) 2 pts</span> — One for a labeled loanable funds graph (REAL interest rate on the vertical axis). One for demand for loanable funds shifting RIGHT with the real interest rate rising (r₁ → r₂).</li>
+            <li><span class="pt">(e) 1 pt</span> — Private investment falls, because borrowing is now more expensive. (This is crowding out — naming it helps but the explanation earns the point.)</li>
+            <li><span class="pt">(f) 1 pt</span> — Appreciates. The higher real interest rate attracts foreign financial capital, which increases demand for Country Z's currency.</li>
+          </ul>
+        </details>
+      </div>
+    </details>
+
+    <details class="fpq">
+      <summary>FRQ 2 · Monetary policy and bond prices <span class="fpts">SHORT · 5 points</span></summary>
+      <div class="fpbody">
+        <div class="scen">The central bank of Country X operates in a banking system with limited reserves. Inflation in Country X is well above its target.</div>
+        <ol type="a">
+          <li>Should the central bank buy or sell government bonds on the open market? Identify the action.</li>
+          <li>Draw a correctly labeled money market graph showing the effect of the action in (a) on the nominal interest rate.</li>
+          <li>Explain how the change in the nominal interest rate affects aggregate demand.</li>
+          <li>What happens to the price of previously issued bonds as a result of the change in interest rates? </li>
+        </ol>
+        <details class="sg">
+          <summary>Show the scoring guide (self-score)</summary>
+          <ul>
+            <li><span class="pt">(a) 1 pt</span> — SELL bonds (contractionary policy to fight inflation).</li>
+            <li><span class="pt">(b) 2 pts</span> — One for a labeled graph: "Nominal interest rate" (vertical), "Quantity of money" (horizontal), vertical MS, downward MD. One for MS shifting LEFT (MS₁ → MS₂) with the nominal rate rising.</li>
+            <li><span class="pt">(c) 1 pt</span> — Chain: higher interest rate → borrowing is more expensive → investment (and interest-sensitive consumption) falls → AD decreases.</li>
+            <li><span class="pt">(d) 1 pt</span> — Bond prices FALL. Interest rates and bond prices move in opposite directions.</li>
+          </ul>
+        </details>
+      </div>
+    </details>
+
+    <details class="fpq">
+      <summary>FRQ 3 · Foreign exchange and net exports <span class="fpts">SHORT · 5 points</span></summary>
+      <div class="fpbody">
+        <div class="scen">Country M's currency is the mark. Consumers in Europe strongly increase their demand for goods made in Country M.</div>
+        <ol type="a">
+          <li>Draw a correctly labeled graph of the foreign exchange market for the mark. Show the effect of the European demand for Country M's goods.</li>
+          <li>Based on your graph, does the mark appreciate or depreciate?</li>
+          <li>Explain the effect of the change in (b) on the price foreigners pay for Country M's exports.</li>
+          <li>Explain the effect of the change in (b) on Country M's imports.</li>
+        </ol>
+        <details class="sg">
+          <summary>Show the scoring guide (self-score)</summary>
+          <ul>
+            <li><span class="pt">(a) 2 pts</span> — One for a labeled graph: vertical axis "euros per mark," horizontal axis "Quantity of marks," upward S, downward D. One for demand for marks shifting RIGHT (Europeans need marks to buy Country M's goods), with the exchange rate rising.</li>
+            <li><span class="pt">(b) 1 pt</span> — The mark APPRECIATES (its price in euros rises).</li>
+            <li><span class="pt">(c) 1 pt</span> — Exports become MORE expensive for foreigners, because each mark now costs more euros.</li>
+            <li><span class="pt">(d) 1 pt</span> — Imports INCREASE, because a stronger mark buys more foreign currency, making foreign goods cheaper for Country M's consumers.</li>
+          </ul>
+        </details>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>AP Macro Review · aligned to the College Board AP® Macroeconomics Course and Exam Description.</span>
+    <span>Tip: come back and redo the practice set until you score 80%+ in every unit.</span>
+  </div>
+</footer>
+
+<script>
+/* ================= VOCABULARY ================= */
+const VOCAB = [
+["Scarcity","U1","Resources are limited, but wants are unlimited. This is why every choice has a cost."],
+["Opportunity cost","U1","The value of the next best choice you give up when you decide."],
+["Production possibilities curve (PPC)","U1","A graph showing the maximum combinations of two goods an economy can make."],
+["Comparative advantage","U1","Being able to make something at a LOWER opportunity cost than someone else. It decides who should trade what."],
+["Absolute advantage","U1","Being able to make MORE of something with the same resources."],
+["Equilibrium","U1","The price where quantity demanded equals quantity supplied. The market 'clears.'"],
+["Shortage","U1","Price is too low — buyers want more than sellers offer."],
+["Surplus","U1","Price is too high — sellers offer more than buyers want."],
+["Gross domestic product (GDP)","U2","The total value of all final goods and services made inside a country in one year."],
+["Final good","U2","A product sold to its last user. Intermediate goods (parts) are not counted in GDP."],
+["Consumer price index (CPI)","U2","A number that tracks the cost of a fixed basket of goods over time. Used to measure inflation."],
+["Inflation","U2","A rise in the overall price level. Your money buys less."],
+["Deflation","U2","A fall in the overall price level."],
+["Nominal","U2","Measured in current prices — NOT adjusted for inflation."],
+["Real","U2","Adjusted for inflation. Use real values to compare different years."],
+["Labor force","U2","Everyone who is working plus everyone actively looking for work."],
+["Frictional unemployment","U2","Being between jobs or searching for a first job. Normal and short."],
+["Structural unemployment","U2","Your skills no longer match the jobs available (example: robots replaced the job)."],
+["Cyclical unemployment","U2","Job loss caused by a recession. This is the type policy tries to fix."],
+["Natural rate of unemployment","U2","Frictional + structural. The unemployment that exists even in a healthy economy."],
+["Discouraged worker","U2","Someone who stopped looking for work. NOT counted as unemployed."],
+["Business cycle","U2","The pattern of expansion, peak, recession, trough that economies repeat."],
+["Aggregate demand (AD)","U3","Total spending on a country's goods: C + I + G + Xn."],
+["Aggregate supply (SRAS / LRAS)","U3","Total production. Short-run AS slopes up; long-run AS is vertical at full employment."],
+["Full-employment output (Yf)","U3","The GDP an economy produces when unemployment is at its natural rate."],
+["Recessionary gap","U3","Actual output is BELOW full employment. Unemployment is high."],
+["Inflationary gap","U3","Actual output is ABOVE full employment. Prices are rising fast."],
+["Marginal propensity to consume (MPC)","U3","The fraction of each new dollar of income that people SPEND."],
+["Multiplier effect","U3","One dollar of new spending creates more than one dollar of GDP, because spending becomes someone's income."],
+["Fiscal policy","U3","The government changing its SPENDING or TAXES to steer the economy."],
+["Automatic stabilizers","U3","Taxes and programs (like unemployment benefits) that fight recessions without any new law."],
+["Bond","U4","An IOU. You lend money and get paid back with interest. Bond prices fall when interest rates rise."],
+["Nominal interest rate","U4","The stated rate, not adjusted for inflation. Used in the MONEY market."],
+["Real interest rate","U4","Nominal rate minus inflation. Used in the LOANABLE FUNDS market."],
+["Money supply","U4","All the money available: cash plus checking (demand) deposits."],
+["Fractional reserve banking","U4","Banks keep only part of deposits as reserves and lend out the rest — this creates new money."],
+["Required reserves","U4","The part of deposits a bank MUST keep and cannot lend."],
+["Excess reserves","U4","Reserves above the requirement. This is what banks can lend."],
+["Open market operations","U4","The central bank buying or selling government bonds to change the money supply."],
+["Federal funds rate","U4","The interest rate banks charge each other for overnight loans. The Fed's main target."],
+["Monetary policy","U4","The CENTRAL BANK changing interest rates or the money supply. (Fiscal = government; monetary = central bank.)"],
+["Phillips curve","U5","Shows the short-run trade-off: lower unemployment usually means higher inflation."],
+["Quantity theory of money","U5","MV = PQ. Printing money too fast for too long causes inflation."],
+["Velocity of money","U5","How many times the average dollar is spent in a year."],
+["Budget deficit","U5","The government spends more than it collects in ONE year."],
+["National debt","U5","All past deficits added together — the total amount owed."],
+["Crowding out","U5","Government borrowing pushes up the real interest rate, so businesses invest less."],
+["Economic growth","U5","A long-run increase in what an economy CAN produce. Shifts LRAS and the PPC right."],
+["Productivity","U5","Output per worker. The main engine of long-run growth."],
+["Exchange rate","U6","The price of one currency measured in another currency."],
+["Appreciation","U6","A currency becomes STRONGER (buys more foreign currency)."],
+["Depreciation","U6","A currency becomes WEAKER. Good for that country's exports."],
+["Current account","U6","Tracks trade in goods and services plus income flows between countries."],
+["Capital and financial account","U6","Tracks purchases of assets (stocks, bonds, factories) between countries."],
+["Net exports (Xn)","U6","Exports minus imports. Part of AD."],
+["Capital flows","U6","Money moving between countries. It flows toward the country with the higher real interest rate."]
+];
+
+const vgrid = document.getElementById('vgrid');
+const vempty = document.getElementById('vempty');
+function renderVocab(filter){
+  const f = (filter||'').trim().toLowerCase();
+  vgrid.innerHTML = '';
+  let shown = 0;
+  VOCAB.forEach(([t,u,d])=>{
+    if(f && !(t.toLowerCase().includes(f) || d.toLowerCase().includes(f))) return;
+    shown++;
+    const c = document.createElement('div');
+    c.className = 'vcard';
+    c.innerHTML = '<div><span class="vt">'+t+'</span><span class="vu">'+u+'</span></div><div class="vd">'+d+'</div>';
+    vgrid.appendChild(c);
+  });
+  vempty.style.display = shown ? 'none' : 'block';
+}
+document.getElementById('vsearch').addEventListener('input', e=>renderVocab(e.target.value));
+renderVocab('');
+
+/* ================= PRACTICE QUIZ ================= */
+/* q, options, correct index, explanation, unit */
+const QUIZ = [
+// UNIT 1
+["Maria has one free hour. She can watch a movie, study, or sleep. She chooses to study. What is her opportunity cost?",
+ ["The hour of studying","The value of her next best choice, like the movie","All three activities together","Nothing, because studying is free"],1,
+ "Opportunity cost is only the NEXT BEST thing you give up — one alternative, not all of them.","U1"],
+["An economy is producing at a point INSIDE its production possibilities curve. This means:",
+ ["The economy is growing","Resources are unemployed or used inefficiently","The point is impossible to reach","Technology has improved"],1,
+ "Inside the curve = the economy could make more but isn't. Some workers or machines are sitting unused.","U1"],
+["Country A gives up 2 shirts to make 1 computer. Country B gives up 5 shirts to make 1 computer. Who has the comparative advantage in computers?",
+ ["Country B, because it gives up more","Country A, because its opportunity cost is lower","Both countries equally","Neither country"],1,
+ "Comparative advantage = LOWER opportunity cost. Country A only gives up 2 shirts per computer, so A should make computers.","U1"],
+["The price of pizza falls, and people buy more pizza. On the demand graph for pizza, this is:",
+ ["A shift of the demand curve to the right","A shift of the demand curve to the left","A movement along the demand curve","A shift of the supply curve"],2,
+ "A change in the good's OWN price never shifts its curve — it moves you along it. Only outside factors (income, tastes, etc.) shift demand.","U1"],
+// UNIT 2
+["Which of these IS counted in this year's U.S. GDP?",
+ ["A used car sold at a dealership","Shares of stock bought on the stock market","A new car built in a U.S. factory this year","A car built in Japan and imported"],2,
+ "GDP counts NEW final goods produced INSIDE the country THIS year. Used goods, financial trades, and imports are all excluded.","U2"],
+["A travel agent loses her job because people now book trips online with apps. This is:",
+ ["Frictional unemployment","Structural unemployment","Cyclical unemployment","Seasonal unemployment"],1,
+ "Her skills no longer match available jobs because technology changed the industry. That is structural unemployment.","U2"],
+["The CPI was 120 last year and is 126 this year. The inflation rate is:",
+ ["6%","5%","26%","120%"],1,
+ "Inflation = (126 − 120) ÷ 120 × 100 = 6 ÷ 120 × 100 = 5%. Always divide by the OLD number.","U2"],
+["Inflation turns out much higher than everyone expected. Who is HELPED?",
+ ["People who lent money at a fixed rate","People who saved cash","People who borrowed money at a fixed rate","Workers with fixed salaries"],2,
+ "Borrowers repay their loans with dollars that are worth less than expected. Lenders and savers lose.","U2"],
+// UNIT 3
+["Which event shifts aggregate demand (AD) to the RIGHT?",
+ ["A rise in the overall price level","Consumers become more confident and spend more","Oil prices increase for producers","Imports increase while exports stay the same"],1,
+ "AD shifts when C, I, G, or Xn changes. More consumer spending = AD right. (Price level changes move you ALONG AD; oil prices shift SRAS.)","U3"],
+["The MPC is 0.8. The government spends $10 billion more. What is the MAXIMUM change in real GDP?",
+ ["$8 billion","$10 billion","$50 billion","$80 billion"],2,
+ "Multiplier = 1 ÷ (1 − 0.8) = 1 ÷ 0.2 = 5. Then $10 billion × 5 = $50 billion.","U3"],
+["The economy is in a recessionary gap. Which fiscal policy fights it?",
+ ["Raise taxes","Decrease government spending","Increase government spending or cut taxes","Sell government bonds"],2,
+ "Recession → we need MORE spending. The government spends more or cuts taxes so people spend more. (Selling bonds is monetary policy.)","U3"],
+["Oil prices suddenly rise sharply. In the AD–AS model, the short-run result is:",
+ ["Higher output and lower price level","Lower output and higher price level","Higher output and higher price level","No change"],1,
+ "Costly inputs shift SRAS LEFT: output falls AND prices rise at the same time. This is stagflation — the worst combination.","U3"],
+// UNIT 4
+["Interest rates in the economy rise. What happens to the price of previously issued bonds?",
+ ["It rises","It falls","It stays the same","It doubles"],1,
+ "Bond prices and interest rates always move in OPPOSITE directions. New bonds pay more, so old bonds become less attractive and their price falls.","U4"],
+["The reserve requirement is 25%. What is the money multiplier?",
+ ["25","4","2.5","0.25"],1,
+ "Money multiplier = 1 ÷ reserve requirement = 1 ÷ 0.25 = 4. Each dollar of excess reserves can create up to $4 of money.","U4"],
+["The Fed wants to fight high inflation. Which action fits?",
+ ["Buy government bonds","Sell government bonds","Lower the interest paid on reserves","Increase government spending"],1,
+ "To fight inflation, the Fed shrinks the money supply: it SELLS bonds (or raises administered rates). Interest rates rise, spending cools.","U4"],
+["The nominal interest rate is 7% and inflation is 3%. The real interest rate is:",
+ ["10%","4%","3%","21%"],1,
+ "Real = nominal − inflation = 7% − 3% = 4%. The real rate is what lenders truly earn after inflation.","U4"],
+// UNIT 5
+["Aggregate demand increases in the short run. On the short-run Phillips curve, the economy:",
+ ["Moves along the curve: unemployment falls, inflation rises","Moves along the curve: unemployment rises, inflation falls","Shifts the whole curve right","Shifts the whole curve left"],0,
+ "AD shifts = MOVEMENT ALONG the SRPC. More demand → more jobs (lower unemployment) but higher inflation. Supply shocks are what SHIFT the SRPC.","U5"],
+["In the LONG run, the Phillips curve is:",
+ ["Downward sloping","Upward sloping","Vertical at the natural rate of unemployment","Horizontal at zero inflation"],2,
+ "In the long run there is NO trade-off between inflation and unemployment. The LRPC is vertical at the natural rate.","U5"],
+["The government borrows heavily to cover a large deficit. The likely result is:",
+ ["Lower real interest rates and more private investment","Higher real interest rates and less private investment","No change in interest rates","Lower inflation automatically"],1,
+ "This is crowding out: government demand for loanable funds raises the real interest rate, so businesses borrow and invest less.","U5"],
+["Which change causes long-run economic growth (LRAS shifts right)?",
+ ["A temporary increase in consumer spending","An increase in worker productivity from better education","A higher price level","An increase in cyclical unemployment"],1,
+ "Growth comes from MORE or BETTER resources: productivity, capital, technology. Spending changes are short-run; they don't move LRAS.","U5"],
+// UNIT 6
+["The U.S. dollar depreciates against other currencies. What happens to U.S. net exports?",
+ ["They increase, because U.S. goods look cheaper to foreigners","They decrease, because U.S. goods look expensive","They stay the same","They become zero"],0,
+ "Weaker dollar → foreigners can buy U.S. goods more cheaply → exports up, imports down → net exports rise → AD rises.","U6"],
+["Real interest rates rise in the U.S. compared to other countries. What happens?",
+ ["Financial capital flows OUT of the U.S. and the dollar depreciates","Financial capital flows INTO the U.S. and the dollar appreciates","Nothing changes in currency markets","U.S. exports automatically increase"],1,
+ "Money chases the higher return. Foreigners buy U.S. assets, which means they must buy dollars first → demand for dollars rises → dollar appreciates.","U6"],
+["Americans start buying many more Japanese cars. In the foreign exchange market for the DOLLAR, this:",
+ ["Increases the demand for dollars","Increases the supply of dollars, so the dollar depreciates","Decreases the supply of dollars","Makes the dollar appreciate"],1,
+ "To buy Japanese goods, Americans trade dollars for yen — they SUPPLY dollars. More supply → the dollar's price falls (depreciates).","U6"],
+["The exchange rate is 1 dollar = 0.80 euros. A European product costs 40 euros. Its price in dollars is:",
+ ["$32","$40","$50","$80"],2,
+ "40 euros ÷ 0.80 euros per dollar = $50. Divide by the exchange rate to convert into dollars here.","U6"],
+// UNIT 1 — extra
+["Which event shifts a country's production possibilities curve OUTWARD?",
+ ["Unemployment falls","A new technology makes workers more productive","Consumers demand more goods","The price level rises"],1,
+ "The PPC only shifts with MORE resources or BETTER technology. Using existing resources more fully just moves you toward the curve, not past it.","U1"],
+["Using all its resources, a farm can make 10 shirts and 0 hats, or 6 shirts and 2 hats. The opportunity cost of ONE hat is:",
+ ["2 shirts","4 shirts","6 shirts","10 shirts"],0,
+ "Making 2 hats cost 4 shirts (10 − 6). So 1 hat costs 4 ÷ 2 = 2 shirts. Opportunity cost = what you give up ÷ what you get.","U1"],
+["Country X can make 10 wheat or 5 cloth. Country Y can make 4 wheat or 4 cloth. Who should specialize in cloth?",
+ ["Country X, because it can make more cloth","Country Y, because its opportunity cost of cloth is only 1 wheat","Country X, because it has absolute advantage in both","Neither — they should not trade"],1,
+ "Opportunity cost of 1 cloth: X gives up 2 wheat, Y gives up 1 wheat. Y is the cheaper cloth maker, so Y specializes in cloth. Ignore absolute advantage.","U1"],
+["A new machine lowers the cost of producing laptops. In the laptop market:",
+ ["Demand shifts right","Demand shifts left","Supply shifts right, price falls, quantity rises","Supply shifts left, price rises"],2,
+ "Cheaper production = producers offer more at every price = supply shifts RIGHT. Equilibrium price falls and quantity rises.","U1"],
+["Demand for coffee increases AND supply of coffee increases at the same time. What happens for sure?",
+ ["Price rises","Price falls","Quantity rises, but the price change is uncertain","Quantity falls, but the price change is uncertain"],2,
+ "Both shifts push quantity UP, so quantity definitely rises. But demand pushes price up while supply pushes it down — price is indeterminate.","U1"],
+["Pizza is a normal good. Consumer incomes rise. In the pizza market:",
+ ["Demand shifts right and price rises","Demand shifts left and price falls","Supply shifts right","There is only a movement along the demand curve"],0,
+ "For a NORMAL good, more income = more demand at every price = demand shifts right. Price and quantity both rise.","U1"],
+// UNIT 2 — extra
+["C = $500B, I = $100B, G = $200B, exports = $50B, imports = $70B. GDP is:",
+ ["$850 billion","$780 billion","$920 billion","$730 billion"],1,
+ "GDP = C + I + G + (X − M) = 500 + 100 + 200 + (50 − 70) = 780. Don't forget to SUBTRACT imports.","U2"],
+["A country has 190 million employed and 10 million unemployed people. The unemployment rate is:",
+ ["10%","5.3%","5%","19%"],2,
+ "Labor force = 190 + 10 = 200 million. Rate = 10 ÷ 200 × 100 = 5%. Divide by the LABOR FORCE, not the population.","U2"],
+["Nominal GDP is $21 trillion and the price index (deflator) is 105. Real GDP is:",
+ ["$22.05 trillion","$21 trillion","$20 trillion","$19 trillion"],2,
+ "Real GDP = nominal ÷ index × 100 = 21 ÷ 105 × 100 = $20 trillion. Real strips out the inflation.","U2"],
+["Which person is officially counted as UNEMPLOYED?",
+ ["A full-time student who is not looking for work","A retired grandmother","A factory worker who was laid off and is applying for jobs","A discouraged worker who gave up searching"],2,
+ "Unemployed = no job AND actively looking. Students, retirees, and discouraged workers are not in the labor force at all.","U2"],
+["The lowest point of the business cycle, where a recession ends, is called the:",
+ ["Peak","Expansion","Trough","Recovery gap"],2,
+ "The cycle goes: expansion → peak → recession (contraction) → trough → expansion again. The trough is the bottom.","U2"],
+["Which is a LIMITATION of GDP as a measure of well-being?",
+ ["It counts government spending","It ignores unpaid household work and leisure","It includes exports","It is measured in dollars"],1,
+ "GDP misses non-market work (caring for your own kids), leisure time, and how income is distributed. High GDP does not automatically mean high well-being.","U2"],
+// UNIT 3 — extra
+["The MPC is 0.75. The government CUTS taxes by $20 billion. The maximum change in real GDP is:",
+ ["+$20 billion","+$60 billion","+$80 billion","−$60 billion"],1,
+ "Tax multiplier = −MPC ÷ MPS = −0.75 ÷ 0.25 = −3. A tax CUT of $20B × (−3) = +$60B. Notice it is smaller than the $80B a spending increase would create.","U3"],
+["Why does the aggregate demand curve slope downward? One reason is the wealth effect:",
+ ["Higher prices make people's savings buy less, so they spend less","Higher prices increase wages automatically","Lower prices shift the curve right","Higher prices raise productivity"],0,
+ "When the price level rises, the money people hold loses purchasing power, so consumption falls. (The other reasons: interest-rate effect and exchange-rate effect.)","U3"],
+["Which is an example of an AUTOMATIC stabilizer?",
+ ["Congress passes a new $1 trillion stimulus bill","Unemployment benefit payments rise on their own during a recession","The Fed lowers interest rates","The president orders new infrastructure spending"],1,
+ "Automatic stabilizers work WITHOUT a new decision: in a recession, tax collections fall and benefit payments rise automatically, cushioning AD.","U3"],
+["An economy sits in a recessionary gap and the government does NOTHING. In the long run:",
+ ["The gap stays forever","Wages fall, SRAS shifts right, and output returns to full employment","AD shifts right on its own","LRAS shifts left"],1,
+ "Self-adjustment: high unemployment eventually pushes wages down → production costs fall → SRAS shifts right → output returns to Yf at a LOWER price level.","U3"],
+["Which change shifts LONG-run aggregate supply (LRAS) to the right?",
+ ["A higher price level","An increase in government spending","An increase in the capital stock","A cut in interest rates"],2,
+ "LRAS = the economy's capacity. Only more resources, more capital, or better technology move it. Spending and prices do not.","U3"],
+["The economy is in an INFLATIONARY gap. The correct fiscal policy is to:",
+ ["Increase government spending","Cut taxes","Decrease government spending or raise taxes","Buy government bonds"],2,
+ "Too much spending is overheating the economy, so the government cools it: spend less or tax more, shifting AD left.","U3"],
+// UNIT 4 — extra
+["A store posts all its prices in dollars. This shows money working as a:",
+ ["Medium of exchange","Unit of account","Store of value","Bond"],1,
+ "Unit of account = a common measuring stick for value. (Medium of exchange = using it to buy; store of value = saving it for later.)","U4"],
+["A customer deposits $1,000 in a bank. The reserve requirement is 10%. The bank can immediately lend out:",
+ ["$1,000","$100","$900","$10,000"],2,
+ "Required reserves = $100 (10%). The rest — $900 of EXCESS reserves — can be loaned. (The whole banking system could eventually create up to $1,000 × 10 = $10,000 of money.)","U4"],
+["Why does the money demand curve slope downward?",
+ ["Higher interest rates raise the opportunity cost of holding cash, so people hold less money","People always want more money","Banks refuse deposits at high rates","The Fed sets money demand"],0,
+ "Holding cash means giving up interest you could earn on bonds. When rates are high, that sacrifice is big, so people hold less money.","U4"],
+["Which chain correctly shows EXPANSIONARY monetary policy?",
+ ["Fed sells bonds → MS falls → rates rise → AD falls","Fed buys bonds → MS rises → nominal rates fall → investment rises → AD rises","Government spends more → AD rises","Fed buys bonds → MS rises → rates rise → AD falls"],1,
+ "Buy bonds = pump money in. More money → lower nominal interest rate → cheaper borrowing → more investment and consumption → AD shifts right.","U4"],
+["In a banking system with AMPLE reserves, the Fed mainly raises interest rates by:",
+ ["Raising the reserve requirement","Raising its administered rates, like interest paid on reserves","Printing less currency","Ordering banks to stop lending"],1,
+ "With ample reserves, small changes in the money supply barely move rates (the flat part of reserve demand). So the Fed moves its administered rates, and market rates follow.","U4"],
+["Households decide to save much more of their income. In the loanable funds market:",
+ ["Supply of loanable funds shifts right and the real interest rate falls","Supply shifts left and the real rate rises","Demand shifts right and the real rate rises","Nothing changes"],0,
+ "Savers SUPPLY loanable funds. More saving = supply right = cheaper borrowing (lower real interest rate) = more investment.","U4"],
+// UNIT 5 — extra
+["M = $400 billion, velocity = 5, and real output (Q) = 1,000 billion units. Using MV = PQ, the price level is:",
+ ["0.5","2","5","2,000"],1,
+ "MV = PQ → 400 × 5 = P × 1,000 → 2,000 = 1,000P → P = 2. Plug in and solve for the missing letter.","U5"],
+["A severe negative supply shock (oil crisis) hits. On the Phillips curve model:",
+ ["Movement up along the SRPC","Movement down along the SRPC","The SRPC shifts RIGHT — higher inflation AND higher unemployment","The LRPC shifts left"],2,
+ "Supply shocks SHIFT the SRPC. A bad shock moves it right: stagflation, where both inflation and unemployment get worse together.","U5"],
+["Better job-search websites lower the natural rate of unemployment. On the Phillips curve model, this:",
+ ["Shifts the LRPC left","Shifts the LRPC right","Moves the economy along the SRPC","Has no effect"],0,
+ "The LRPC stands at the natural rate. If the natural rate falls, the LRPC shifts LEFT (toward lower unemployment).","U5"],
+["In the LONG run, an increase in the money supply causes:",
+ ["Permanently lower unemployment","Permanently higher real GDP","A higher price level, with no change in real output","Lower inflation"],2,
+ "Money is neutral in the long run: printing money cannot create real production forever. Output returns to full employment; only prices end up higher.","U5"],
+["This year the government collected $4 trillion and spent $5 trillion. The $1 trillion difference is:",
+ ["The national debt","This year's budget deficit","Crowding out","The trade deficit"],1,
+ "One year of overspending = the DEFICIT. The DEBT is all past deficits stacked up. Deficits add to the debt.","U5"],
+["Which government policy most directly promotes LONG-RUN economic growth?",
+ ["A one-time tax rebate to boost spending","Investing in education and infrastructure","Raising the price level","Increasing unemployment benefits"],1,
+ "Growth comes from productivity: educated workers, more capital, better technology. Spending boosts are short-run demand tools, not growth engines.","U5"],
+// UNIT 6 — extra
+["Which transaction is recorded in a country's CURRENT account?",
+ ["A foreign company builds a factory in the country","A foreigner buys the country's government bonds","The country exports cars to another country","A citizen buys foreign stocks"],2,
+ "Current account = trade in goods and services (plus income flows). Buying assets — factories, stocks, bonds — goes in the capital and financial account.","U6"],
+["Real interest rates rise in Europe while U.S. rates stay the same. U.S. investors will:",
+ ["Buy more European assets, increasing capital OUTFLOW from the U.S.","Buy more U.S. assets","Stop investing anywhere","Cause the euro to depreciate"],0,
+ "Money chases the higher return. U.S. financial capital flows out to Europe — and to buy European assets, investors sell dollars and buy euros, so the euro appreciates.","U6"],
+["The exchange rate is $1 = 120 yen. An American product costs $25. Its price in yen is:",
+ ["145 yen","3,000 yen","4.8 yen","1,200 yen"],1,
+ "$25 × 120 yen per dollar = 3,000 yen. Multiply when converting FROM dollars INTO the other currency.","U6"],
+["Foreign consumers suddenly love American-made trucks. In the foreign exchange market for the dollar:",
+ ["Supply of dollars rises and the dollar depreciates","Demand for dollars rises and the dollar appreciates","Demand for dollars falls","Nothing happens to the dollar"],1,
+ "Foreigners need dollars to buy U.S. goods, so demand for dollars shifts right → the dollar appreciates.","U6"],
+["Inflation in Country A is much higher than in its trading partners. Over time, Country A's currency will likely:",
+ ["Appreciate, because prices are rising","Depreciate, because its goods become relatively expensive and demand for its currency falls","Stay fixed","Double in value"],1,
+ "High inflation makes A's exports pricey. Foreigners buy less from A → less demand for A's currency → it depreciates.","U6"],
+["A country's central bank raises interest rates sharply. The full chain for NET EXPORTS is:",
+ ["Rates ↑ → capital flows in → currency appreciates → exports look expensive → net exports FALL","Rates ↑ → currency depreciates → net exports rise","Rates ↑ → net exports rise automatically","Rates ↑ → imports become impossible"],0,
+ "Higher rates attract foreign money → demand for the currency rises → appreciation → the country's goods cost more abroad → exports fall, imports rise → Xn falls.","U6"]
+];
+
+const UNITS = ["All","U1","U2","U3","U4","U5","U6"];
+const chipbar = document.getElementById('chipbar');
+const qtext = document.getElementById('qtext');
+const optsEl = document.getElementById('opts');
+const fb = document.getElementById('feedback');
+const nextbtn = document.getElementById('nextbtn');
+const restartbtn = document.getElementById('restartbtn');
+const qcount = document.getElementById('qcount');
+const qunit = document.getElementById('qunit');
+const scorenum = document.getElementById('scorenum');
+const scoreden = document.getElementById('scoreden');
+const LETTERS = ["A","B","C","D"];
+
+let pool = [], idx = 0, score = 0, answeredCount = 0, currentFilter = "All";
+let timerId = null, remaining = 0;
+const timerEl = document.getElementById('timer');
+const timedchk = document.getElementById('timedchk');
+
+function fmt(s){ const m = Math.floor(s/60), ss = s%60; return m + ':' + String(ss).padStart(2,'0'); }
+function stopTimer(){ if(timerId){ clearInterval(timerId); timerId = null; } }
+function startTimer(){
+  stopTimer();
+  timerEl.classList.remove('low');
+  if(!timedchk.checked){ timerEl.textContent = ''; return; }
+  remaining = pool.length * 70;
+  timerEl.textContent = '⏱ ' + fmt(remaining);
+  timerId = setInterval(()=>{
+    remaining--;
+    timerEl.textContent = '⏱ ' + fmt(remaining);
+    if(remaining <= 60) timerEl.classList.add('low');
+    if(remaining <= 0){ stopTimer(); finishSet(true); }
+  }, 1000);
+}
+
+function shuffle(a){
+  const arr = a.slice();
+  for(let i=arr.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+  return arr;
+}
+
+function startQuiz(filter){
+  currentFilter = filter;
+  pool = shuffle(QUIZ.filter(q => filter==="All" || q[4]===filter));
+  idx = 0; score = 0; answeredCount = 0;
+  document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on', c.dataset.u===filter));
+  showQuestion();
+  startTimer();
+}
+
+function finishSet(timeUp){
+  stopTimer();
+  const total = pool.length;
+  const pct = Math.round(score/total*100);
+  qcount.textContent = timeUp ? 'Time is up' : 'Set complete';
+  qunit.textContent = currentFilter==="All" ? 'All units' : 'Unit ' + currentFilter.slice(1);
+  qtext.textContent = timeUp
+    ? 'Time ran out. You answered ' + answeredCount + ' of ' + total + ' and scored ' + score + ' correct.'
+    : 'You scored ' + score + ' of ' + total + ' (' + pct + '%).';
+  optsEl.innerHTML = '';
+  if(timeUp){
+    fb.className = 'feedback show bad';
+    fb.innerHTML = '<b>Pacing practice.</b>On the real exam, unanswered questions earn nothing — never leave blanks. Guess if you must, then run the set again and aim to finish with time to spare.';
+  } else {
+    fb.className = 'feedback show ' + (pct>=80 ? 'good' : 'bad');
+    fb.innerHTML = pct>=80
+      ? '<b>Strong.</b>80% or higher means this unit is in good shape. Move to your weakest unit next.'
+      : '<b>Keep working.</b>Reread this unit\'s card and vocabulary above, then run the set again. Aim for 80%+.';
+  }
+  nextbtn.disabled = true;
+}
+
+function showQuestion(){
+  const q = pool[idx];
+  qcount.textContent = 'Question ' + (idx+1) + ' of ' + pool.length;
+  qunit.textContent = 'Unit ' + q[4].slice(1);
+  qtext.textContent = q[0];
+  fb.className = 'feedback'; fb.innerHTML = '';
+  nextbtn.disabled = true;
+  scorenum.textContent = score; scoreden.textContent = answeredCount;
+  optsEl.innerHTML = '';
+  q[1].forEach((opt,i)=>{
+    const b = document.createElement('button');
+    b.className = 'opt';
+    b.innerHTML = '<span class="ol">'+LETTERS[i]+'</span><span>'+opt+'</span>';
+    b.addEventListener('click', ()=>answer(i,b));
+    optsEl.appendChild(b);
+  });
+}
+
+function answer(i, btn){
+  const q = pool[idx];
+  const correct = q[2];
+  answeredCount++;
+  document.querySelectorAll('.opt').forEach((b,j)=>{
+    b.disabled = true;
+    if(j===correct) b.classList.add('correct');
+    else if(b===btn) b.classList.add('wrong');
+    else b.classList.add('dim');
+  });
+  if(i===correct){
+    score++;
+    fb.className = 'feedback show good';
+    fb.innerHTML = '<b>Correct.</b>' + q[3];
+  } else {
+    fb.className = 'feedback show bad';
+    fb.innerHTML = '<b>Not quite — the answer is '+LETTERS[correct]+'.</b>' + q[3];
+  }
+  scorenum.textContent = score; scoreden.textContent = answeredCount;
+  nextbtn.disabled = false;
+  nextbtn.textContent = (idx === pool.length-1) ? 'See result' : 'Next question';
+  nextbtn.focus();
+}
+
+nextbtn.addEventListener('click', ()=>{
+  if(idx < pool.length-1){ idx++; showQuestion(); }
+  else { finishSet(false); }
+});
+restartbtn.addEventListener('click', ()=>startQuiz(currentFilter));
+timedchk.addEventListener('change', ()=>startQuiz(currentFilter));
+
+UNITS.forEach(u=>{
+  const c = document.createElement('button');
+  c.className = 'chip';
+  c.dataset.u = u;
+  c.textContent = u==="All" ? 'All units' : 'Unit ' + u.slice(1);
+  c.addEventListener('click', ()=>startQuiz(u));
+  chipbar.appendChild(c);
+});
+startQuiz("All");
+</script>
+</body>
+</html>
